@@ -1,0 +1,331 @@
+/*
+Dark tealish  #4292a7
+Sandy beige   #bcaa96
+Dark gray     #222222
+Light gray    #d3d4d6
+Off-white     #f6f6f6
+*/
+
+/* global styles
+-----------------*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f5f5f5;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+h1, h2, h3 {
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+h1 {
+    font-size: 4.8rem;
+    line-height: 1.35;
+}
+h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+/* Basic styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222222;
+    /* Green background */
+    color: #d3d4d6;
+}
+
+/* Logo styling */
+.logo a {
+    color: #d3d4d6;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #d3d4d6;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, text-decoration 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e0e0e0;
+    /* Lighter color for active/hover */
+    background-color: #4292a7;
+    /* Darker teal background on hover */
+    border-radius: 4px;
+    /* Optional: rounded corners */
+}
+
+/* Menu toggle button for mobile view */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #d3d4d6;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+}
+
+/* Responsive styling */
+@media (max-width: 799px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #4292a7;
+        /* teal background for mobile view */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* links
+-----------------*/
+
+a {
+    color: #4292a7;
+}
+a:hover {
+    color: #bcaa96;
+    text-decoration: none;
+}
+footer a {
+    color: #bcaa96;
+}
+footer a:hover {
+    color: #4292a7;
+    text-decoration: none;
+}
+.btn {
+    background: #4292a7;
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 6px;
+    letter-spacing: .08em;
+    line-height: 1;
+    border-radius: 2px;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* home-index
+-----------------*/
+.home {
+    background: url(../img/hdr-b.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+.contentbg {
+    background: rgb(235 235 235 / 0.9);
+    padding: 30px;
+}
+@media screen and (max-width:600px){
+    .home .content-wrapper{
+        padding: 10px;
+    }
+    .contentbg {
+        padding: 20px;
+    }
+}
+/* resume
+-----------------*/
+.resume header::before {
+    background: url(../img/hdr-b.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 600px;
+}
+.resumesect {
+    margin-bottom: 50px;
+}
+.resumesect h2 {
+    border-bottom: 2px dashed #d3d4d6;
+}
+.downloadlink {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.4rem;
+}
+@media screen and (max-width: 1200px){
+    .downloadlink {
+        position: absolute;
+    }
+}
+@media screen and (max-width:539px){
+    .resume header::before {
+        height: 200px;
+    }
+    h1 {
+        font-size: 3.8rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+/* profile
+-----------------*/
+
+/* projects
+-----------------*/
+.projectitem {
+    margin: 30px 0;
+}
+.projectitem img {
+    width: 300px;
+}
+@media screen and (min-width:800px) {
+    .projectitem {
+        display: flow-root;
+    }
+    .projectitem img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width:540px) and (max-width:799px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 12px;
+
+    }
+    .projectitem img {
+        width: 100%;
+    }
+}
+@media screen and (max-width:539px){
+    .projectitem img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Work Experience
+-----------------*/
+.workitem {
+    margin: 30px 0;
+}
+.workinfo p {
+    margin: 0;
+}
+
+@media screen and (min-width:800px){
+    .workitem {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        column-gap: 20px;
+    }
+    .worksum p:first-child {
+        margin-top: 0;
+    }
+}
+
+/* education
+-----------------*/
+.eduitem {
+    margin: 30px 0;
+}
+.eduitem p {
+    margin: 0;
+}
+/* footer
+-----------------*/
+footer {
+    background: #222;
+    color: #d3d4d6;
+    
+}
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.socials img {
+    width: 32px;
+}
+.socials img:hover {
+    opacity: 0.5;
+}
+@media screen and (min-width:800px){
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width:799px){
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
