@@ -20,7 +20,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#" class="active">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
+            <!-- <li><a href="resume.html">Resume</a></li> -->
         </ul>
         <div class="menu-toggle">
             <span class="bar"></span>
@@ -29,7 +29,7 @@
         </div>
       </nav>
       <script src="js/main.js"></script>
-    <main>
+    <main class="content-wrapper">
         <!-- //  PROJECTS  // -->
       <section class="resumesect">
         <!-- Start content edits below this line. -->
@@ -39,37 +39,77 @@
         <!-- To add more items, copy this whole <section></section> block-->
         <div class="project-wrapper">
           <section class="projectitem">
-            <img src="img/project-final-03-01-500px.png" srcset="img/project-final-03-01-1000px.png 2x" alt="'Detritus and Drain' project by Tim Wong" width="" height="">
+            <img class="myImages" id="myImg" src="img/project-final-03-01-500px.png" srcset="img/project-final-03-01-1000px.png 2x" alt="'Detritus and Drain' project by Tim Wong" width="" height="">
             <h3>'Detritus and Drain' Project</h3>
-            <p>Adobe Illustrator. Project created about the exploration of personal interests.</p>
-            <!-- link to project -->
-            <a class="btn" target="_blank">Link</a>
-            <!-- additional links, e.g. newsletter -->
-            <a class="btn" target="_blank">Another link</a>
+            <p>Adobe Illustrator. Project created about the exploration of personal interests. From a technical aspect I wanted to produce the effect of 3-D shapes floating in shallow water.</p>
           </section>
 
           <section class="projectitem">
-            <img src="img/TimWong_Final-2-500px.png" srcset="img/TimWong_Final-2-1000px.png 2x" alt="Liminal HDR photograph by Tim Wong" width="" height="">
+            <img class="myImages" id="myImg" src="img/20ya-500px.png" srcset="img/20ya-1000px.png 2x" alt="'Twenty Year Interface' project by Tim Wong" width="" height="">
+            <h3>Twenty Year Interface</h3>
+            <p>A project built in html about exploring the changes in ui/ux design websites have enjoyed from 2005 to 2025. I spent a while researching old archives of what Apple, YouTube, Xbox, etc. homepages looked like, and what kinds of trends were prevelent back then.</p>
+            <a href="https://citsymon.github.io/Art109/project2/indexold.html" class="btn" target="_blank">Live Site</a>
+          </section>
+
+          <section class="projectitem">
+            <img class="myImages" id="myImg" src="img/TimWong_Final-2-500px.png" srcset="img/TimWong_Final-2-1000px.png 2x" alt="Liminal HDR photograph by Tim Wong" width="" height="">
             <h3>HDR photography</h3>
             <p>Sample of HDR photos I've produced for a project. From a collection of places I know distorted into the surreal and liminal in post processing</p>
             <!-- link to project -->
-            <a class="btn" target="_blank">Link</a>
+             <div class="thumbbtn"><img class="myImages" id="myImg" src="img/hdr-a-500px.png" srcset="img/hdr-a-1000px.png" alt="Liminal HDR photograph by Tim Wong" width="" height=""></div>
+             <div class="thumbbtn"><img class="myImages" id="myImg" src="img/hdr-b-500px.png" srcset="img/hdr-b-1000px.png" alt="Liminal HDR photograph by Tim Wong" width="" height=""></div>
+
             <!-- additional links, e.g. newsletter -->
-            <a class="btn" target="_blank">Another link</a>
+            <!-- <a class="btn" target="_blank">0</a> -->
           </section>
 
           <section class="projectitem">
-            <img src="img/ProjectPIV-500px.png" srcset="img/ProjectPIV-1000px.png 2x" alt="'Panzer IV' Project by Tim Wong" width="" height="">
+            <img class="myImages" id="myImg" src="img/ProjectPIV-500px.png" srcset="img/ProjectPIV-1000px.png 2x" alt="'Panzer IV' Project by Tim Wong" width="" height="">
             <h3>Panzer IV</h3>
-            <p>Adobe Illustrator. 2D reproduction of an 'unusual' vehicle. </p>
+            <p>Adobe Illustrator. 2D reproduction of an 'unusual' vehicle. Working from a base photograph I broke down the image into its constituent parts, reproduced, and assembled them together piece by piece.</p>
             <!-- link to project -->
-            <a class="btn" target="_blank">Link</a>
+             <div class="thumbbtn"><img class="myImages" id="myImg" src="img/original-500px.png" srcset="img/original-1000px.png 2x" alt="Original image" width="" height=""></div>
+             <div class="thumbbtn"><img class="myImages" id="myImg" src="img/base-500px.png" srcset="img/base-1000px.png 2x" alt="Basic shapes of the project" width="" height=""></div>
+             <div class="thumbbtn"><img class="myImages" id="myImg" src="img/details-500px.png" srcset="img/details-1000px.png 2x" alt="Detailed components" width="" height=""></div>
+             <div class="thumbbtn"><img class="myImages" id="myImg" src="img/ProjectPIVbg-500px.png" srcset="img/ProjectPIVbg-1000px.png 2x" alt="Finished project overlayed on original image" width="" height=""></div>
             <!-- additional links, e.g. newsletter -->
-            <a class="btn" target="_blank">Another link</a>
+            <!-- <a class="btn" target="_blank">Another link</a> -->
           </section>
         </div>
         <!-- End content edits here. -->
       </section>
+
+      <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
     </main>
+    <footer>
+      <!-- Start content edits below this line. -->
+      <p>© 2025 by Tim Wong | <a href="mailto:citsymon@gmail.com">citsymon@gmail.com</a></p>
+
+      <!-- Add or remove any networks. -->
+      <ul class="socials">
+        <li>
+          <a href="https://x.com/citsymon" target="_blank"><img src="img/icon-logo-twitter.png" alt="Twitter account"></a>
+        </li>
+        <li>
+          <a href="https://discord.com/users/122286058636443648" target="_blank"><img src="img/icon-cord.png" alt="Discord account"></a>
+        </li>
+        <li>
+          <a href="https://www.twitch.tv/citsymon" target="_blank"><img src="img/icon-glitch_flat_purple.png" alt="Twitch account"></a>
+        </li>
+      </ul>
+      <!-- End content edits here. -->
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
